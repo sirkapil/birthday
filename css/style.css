@@ -3,7 +3,6 @@ body {
   height: 100vh;
   overflow: hidden;
   display: flex;
-  font-family: 'Anton', sans-serif;
   justify-content: center;
   align-items: center;
   -webkit-perspective: 1300px;
