@@ -1,0 +1,676 @@
+body {
+  background: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  font-family: 'Anton', sans-serif;
+  justify-content: center;
+  align-items: center;
+  -webkit-perspective: 1300px;
+          perspective: 1300px;
+}
+
+div {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#chocolate_rains {
+  -webkit-transform: rotateX(-15deg);
+          transform: rotateX(-15deg);
+}
+
+.heart .ring {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  opacity: 0;
+  border: 1px solid red;
+}
+.heart .left {
+  left: -20px;
+  width: 20px;
+  height: 20px;
+  background: #c80000;
+  border-radius: 100%;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+.heart .left::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 25px;
+  background: #c80000;
+  border-radius: 0 0 0 100%;
+}
+.heart .right {
+  width: 20px;
+  height: 20px;
+  background: #c80000;
+  border-radius: 100%;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.heart .right::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 25px;
+  background: #c80000;
+  border-radius: 0 0 100% 0;
+}
+.heart .movable {
+  opacity: 0;
+}
+.heart .reverse {
+  -webkit-transform: translateY(70px) rotateZ(180deg);
+          transform: translateY(70px) rotateZ(180deg);
+  opacity: 0.1;
+}
+.heart .reverse .left, .heart .reverse .right {
+  opacity: 0.5;
+}
+.heart:nth-child(1) {
+  -webkit-transform: translateX(-470px) translateZ(783px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-470px) translateZ(783px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(1) .movable {
+  -webkit-animation: drop 5000ms -1177ms linear infinite;
+          animation: drop 5000ms -1177ms linear infinite;
+}
+.heart:nth-child(1) .ring {
+  -webkit-animation: wave 5000ms 2723ms ease-out infinite;
+          animation: wave 5000ms 2723ms ease-out infinite;
+}
+.heart:nth-child(1) .inner {
+  -webkit-animation: rotation 3952ms linear infinite;
+          animation: rotation 3952ms linear infinite;
+}
+.heart:nth-child(2) {
+  -webkit-transform: translateX(92px) translateZ(-505px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(92px) translateZ(-505px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(2) .movable {
+  -webkit-animation: drop 5000ms -2114ms linear infinite;
+          animation: drop 5000ms -2114ms linear infinite;
+}
+.heart:nth-child(2) .ring {
+  -webkit-animation: wave 5000ms 1786ms ease-out infinite;
+          animation: wave 5000ms 1786ms ease-out infinite;
+}
+.heart:nth-child(2) .inner {
+  -webkit-animation: rotation 4217ms linear infinite;
+          animation: rotation 4217ms linear infinite;
+}
+.heart:nth-child(3) {
+  -webkit-transform: translateX(348px) translateZ(700px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(348px) translateZ(700px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(3) .movable {
+  -webkit-animation: drop 5000ms 1505ms linear infinite;
+          animation: drop 5000ms 1505ms linear infinite;
+}
+.heart:nth-child(3) .ring {
+  -webkit-animation: wave 5000ms 5405ms ease-out infinite;
+          animation: wave 5000ms 5405ms ease-out infinite;
+}
+.heart:nth-child(3) .inner {
+  -webkit-animation: rotation 3005ms linear infinite;
+          animation: rotation 3005ms linear infinite;
+}
+.heart:nth-child(4) {
+  -webkit-transform: translateX(-273px) translateZ(-547px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-273px) translateZ(-547px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(4) .movable {
+  -webkit-animation: drop 5000ms -1578ms linear infinite;
+          animation: drop 5000ms -1578ms linear infinite;
+}
+.heart:nth-child(4) .ring {
+  -webkit-animation: wave 5000ms 2322ms ease-out infinite;
+          animation: wave 5000ms 2322ms ease-out infinite;
+}
+.heart:nth-child(4) .inner {
+  -webkit-animation: rotation 3104ms linear infinite;
+          animation: rotation 3104ms linear infinite;
+}
+.heart:nth-child(5) {
+  -webkit-transform: translateX(-340px) translateZ(-673px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-340px) translateZ(-673px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(5) .movable {
+  -webkit-animation: drop 5000ms 1332ms linear infinite;
+          animation: drop 5000ms 1332ms linear infinite;
+}
+.heart:nth-child(5) .ring {
+  -webkit-animation: wave 5000ms 5232ms ease-out infinite;
+          animation: wave 5000ms 5232ms ease-out infinite;
+}
+.heart:nth-child(5) .inner {
+  -webkit-animation: rotation 4921ms linear infinite;
+          animation: rotation 4921ms linear infinite;
+}
+.heart:nth-child(6) {
+  -webkit-transform: translateX(80px) translateZ(-428px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(80px) translateZ(-428px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(6) .movable {
+  -webkit-animation: drop 5000ms -1296ms linear infinite;
+          animation: drop 5000ms -1296ms linear infinite;
+}
+.heart:nth-child(6) .ring {
+  -webkit-animation: wave 5000ms 2604ms ease-out infinite;
+          animation: wave 5000ms 2604ms ease-out infinite;
+}
+.heart:nth-child(6) .inner {
+  -webkit-animation: rotation 3301ms linear infinite;
+          animation: rotation 3301ms linear infinite;
+}
+.heart:nth-child(7) {
+  -webkit-transform: translateX(-462px) translateZ(-540px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-462px) translateZ(-540px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(7) .movable {
+  -webkit-animation: drop 5000ms 1381ms linear infinite;
+          animation: drop 5000ms 1381ms linear infinite;
+}
+.heart:nth-child(7) .ring {
+  -webkit-animation: wave 5000ms 5281ms ease-out infinite;
+          animation: wave 5000ms 5281ms ease-out infinite;
+}
+.heart:nth-child(7) .inner {
+  -webkit-animation: rotation 4022ms linear infinite;
+          animation: rotation 4022ms linear infinite;
+}
+.heart:nth-child(8) {
+  -webkit-transform: translateX(-173px) translateZ(297px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-173px) translateZ(297px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(8) .movable {
+  -webkit-animation: drop 5000ms -661ms linear infinite;
+          animation: drop 5000ms -661ms linear infinite;
+}
+.heart:nth-child(8) .ring {
+  -webkit-animation: wave 5000ms 3239ms ease-out infinite;
+          animation: wave 5000ms 3239ms ease-out infinite;
+}
+.heart:nth-child(8) .inner {
+  -webkit-animation: rotation 2814ms linear infinite;
+          animation: rotation 2814ms linear infinite;
+}
+.heart:nth-child(9) {
+  -webkit-transform: translateX(-242px) translateZ(577px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-242px) translateZ(577px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(9) .movable {
+  -webkit-animation: drop 5000ms 959ms linear infinite;
+          animation: drop 5000ms 959ms linear infinite;
+}
+.heart:nth-child(9) .ring {
+  -webkit-animation: wave 5000ms 4859ms ease-out infinite;
+          animation: wave 5000ms 4859ms ease-out infinite;
+}
+.heart:nth-child(9) .inner {
+  -webkit-animation: rotation 4149ms linear infinite;
+          animation: rotation 4149ms linear infinite;
+}
+.heart:nth-child(10) {
+  -webkit-transform: translateX(-173px) translateZ(-541px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-173px) translateZ(-541px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(10) .movable {
+  -webkit-animation: drop 5000ms -1238ms linear infinite;
+          animation: drop 5000ms -1238ms linear infinite;
+}
+.heart:nth-child(10) .ring {
+  -webkit-animation: wave 5000ms 2662ms ease-out infinite;
+          animation: wave 5000ms 2662ms ease-out infinite;
+}
+.heart:nth-child(10) .inner {
+  -webkit-animation: rotation 4535ms linear infinite;
+          animation: rotation 4535ms linear infinite;
+}
+.heart:nth-child(11) {
+  -webkit-transform: translateX(-223px) translateZ(550px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-223px) translateZ(550px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(11) .movable {
+  -webkit-animation: drop 5000ms 1932ms linear infinite;
+          animation: drop 5000ms 1932ms linear infinite;
+}
+.heart:nth-child(11) .ring {
+  -webkit-animation: wave 5000ms 5832ms ease-out infinite;
+          animation: wave 5000ms 5832ms ease-out infinite;
+}
+.heart:nth-child(11) .inner {
+  -webkit-animation: rotation 4193ms linear infinite;
+          animation: rotation 4193ms linear infinite;
+}
+.heart:nth-child(12) {
+  -webkit-transform: translateX(98px) translateZ(-574px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(98px) translateZ(-574px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(12) .movable {
+  -webkit-animation: drop 5000ms -471ms linear infinite;
+          animation: drop 5000ms -471ms linear infinite;
+}
+.heart:nth-child(12) .ring {
+  -webkit-animation: wave 5000ms 3429ms ease-out infinite;
+          animation: wave 5000ms 3429ms ease-out infinite;
+}
+.heart:nth-child(12) .inner {
+  -webkit-animation: rotation 2400ms linear infinite;
+          animation: rotation 2400ms linear infinite;
+}
+.heart:nth-child(13) {
+  -webkit-transform: translateX(-442px) translateZ(-445px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-442px) translateZ(-445px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(13) .movable {
+  -webkit-animation: drop 5000ms 1425ms linear infinite;
+          animation: drop 5000ms 1425ms linear infinite;
+}
+.heart:nth-child(13) .ring {
+  -webkit-animation: wave 5000ms 5325ms ease-out infinite;
+          animation: wave 5000ms 5325ms ease-out infinite;
+}
+.heart:nth-child(13) .inner {
+  -webkit-animation: rotation 3503ms linear infinite;
+          animation: rotation 3503ms linear infinite;
+}
+.heart:nth-child(14) {
+  -webkit-transform: translateX(395px) translateZ(-269px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(395px) translateZ(-269px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(14) .movable {
+  -webkit-animation: drop 5000ms 542ms linear infinite;
+          animation: drop 5000ms 542ms linear infinite;
+}
+.heart:nth-child(14) .ring {
+  -webkit-animation: wave 5000ms 4442ms ease-out infinite;
+          animation: wave 5000ms 4442ms ease-out infinite;
+}
+.heart:nth-child(14) .inner {
+  -webkit-animation: rotation 3736ms linear infinite;
+          animation: rotation 3736ms linear infinite;
+}
+.heart:nth-child(15) {
+  -webkit-transform: translateX(-205px) translateZ(721px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-205px) translateZ(721px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(15) .movable {
+  -webkit-animation: drop 5000ms 1572ms linear infinite;
+          animation: drop 5000ms 1572ms linear infinite;
+}
+.heart:nth-child(15) .ring {
+  -webkit-animation: wave 5000ms 5472ms ease-out infinite;
+          animation: wave 5000ms 5472ms ease-out infinite;
+}
+.heart:nth-child(15) .inner {
+  -webkit-animation: rotation 2057ms linear infinite;
+          animation: rotation 2057ms linear infinite;
+}
+.heart:nth-child(16) {
+  -webkit-transform: translateX(100px) translateZ(149px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(100px) translateZ(149px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(16) .movable {
+  -webkit-animation: drop 5000ms -2514ms linear infinite;
+          animation: drop 5000ms -2514ms linear infinite;
+}
+.heart:nth-child(16) .ring {
+  -webkit-animation: wave 5000ms 1386ms ease-out infinite;
+          animation: wave 5000ms 1386ms ease-out infinite;
+}
+.heart:nth-child(16) .inner {
+  -webkit-animation: rotation 2483ms linear infinite;
+          animation: rotation 2483ms linear infinite;
+}
+.heart:nth-child(17) {
+  -webkit-transform: translateX(-290px) translateZ(469px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-290px) translateZ(469px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(17) .movable {
+  -webkit-animation: drop 5000ms 646ms linear infinite;
+          animation: drop 5000ms 646ms linear infinite;
+}
+.heart:nth-child(17) .ring {
+  -webkit-animation: wave 5000ms 4546ms ease-out infinite;
+          animation: wave 5000ms 4546ms ease-out infinite;
+}
+.heart:nth-child(17) .inner {
+  -webkit-animation: rotation 4286ms linear infinite;
+          animation: rotation 4286ms linear infinite;
+}
+.heart:nth-child(18) {
+  -webkit-transform: translateX(-469px) translateZ(-323px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-469px) translateZ(-323px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(18) .movable {
+  -webkit-animation: drop 5000ms -2435ms linear infinite;
+          animation: drop 5000ms -2435ms linear infinite;
+}
+.heart:nth-child(18) .ring {
+  -webkit-animation: wave 5000ms 1465ms ease-out infinite;
+          animation: wave 5000ms 1465ms ease-out infinite;
+}
+.heart:nth-child(18) .inner {
+  -webkit-animation: rotation 2564ms linear infinite;
+          animation: rotation 2564ms linear infinite;
+}
+.heart:nth-child(19) {
+  -webkit-transform: translateX(371px) translateZ(655px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(371px) translateZ(655px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(19) .movable {
+  -webkit-animation: drop 5000ms -1833ms linear infinite;
+          animation: drop 5000ms -1833ms linear infinite;
+}
+.heart:nth-child(19) .ring {
+  -webkit-animation: wave 5000ms 2067ms ease-out infinite;
+          animation: wave 5000ms 2067ms ease-out infinite;
+}
+.heart:nth-child(19) .inner {
+  -webkit-animation: rotation 2066ms linear infinite;
+          animation: rotation 2066ms linear infinite;
+}
+.heart:nth-child(20) {
+  -webkit-transform: translateX(-98px) translateZ(372px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-98px) translateZ(372px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(20) .movable {
+  -webkit-animation: drop 5000ms 1070ms linear infinite;
+          animation: drop 5000ms 1070ms linear infinite;
+}
+.heart:nth-child(20) .ring {
+  -webkit-animation: wave 5000ms 4970ms ease-out infinite;
+          animation: wave 5000ms 4970ms ease-out infinite;
+}
+.heart:nth-child(20) .inner {
+  -webkit-animation: rotation 2090ms linear infinite;
+          animation: rotation 2090ms linear infinite;
+}
+.heart:nth-child(21) {
+  -webkit-transform: translateX(25px) translateZ(-195px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(25px) translateZ(-195px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(21) .movable {
+  -webkit-animation: drop 5000ms -1006ms linear infinite;
+          animation: drop 5000ms -1006ms linear infinite;
+}
+.heart:nth-child(21) .ring {
+  -webkit-animation: wave 5000ms 2894ms ease-out infinite;
+          animation: wave 5000ms 2894ms ease-out infinite;
+}
+.heart:nth-child(21) .inner {
+  -webkit-animation: rotation 3583ms linear infinite;
+          animation: rotation 3583ms linear infinite;
+}
+.heart:nth-child(22) {
+  -webkit-transform: translateX(169px) translateZ(-43px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(169px) translateZ(-43px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(22) .movable {
+  -webkit-animation: drop 5000ms -1374ms linear infinite;
+          animation: drop 5000ms -1374ms linear infinite;
+}
+.heart:nth-child(22) .ring {
+  -webkit-animation: wave 5000ms 2526ms ease-out infinite;
+          animation: wave 5000ms 2526ms ease-out infinite;
+}
+.heart:nth-child(22) .inner {
+  -webkit-animation: rotation 2517ms linear infinite;
+          animation: rotation 2517ms linear infinite;
+}
+.heart:nth-child(23) {
+  -webkit-transform: translateX(-170px) translateZ(-281px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-170px) translateZ(-281px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(23) .movable {
+  -webkit-animation: drop 5000ms -2519ms linear infinite;
+          animation: drop 5000ms -2519ms linear infinite;
+}
+.heart:nth-child(23) .ring {
+  -webkit-animation: wave 5000ms 1381ms ease-out infinite;
+          animation: wave 5000ms 1381ms ease-out infinite;
+}
+.heart:nth-child(23) .inner {
+  -webkit-animation: rotation 4485ms linear infinite;
+          animation: rotation 4485ms linear infinite;
+}
+.heart:nth-child(24) {
+  -webkit-transform: translateX(-320px) translateZ(337px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-320px) translateZ(337px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(24) .movable {
+  -webkit-animation: drop 5000ms 456ms linear infinite;
+          animation: drop 5000ms 456ms linear infinite;
+}
+.heart:nth-child(24) .ring {
+  -webkit-animation: wave 5000ms 4356ms ease-out infinite;
+          animation: wave 5000ms 4356ms ease-out infinite;
+}
+.heart:nth-child(24) .inner {
+  -webkit-animation: rotation 4105ms linear infinite;
+          animation: rotation 4105ms linear infinite;
+}
+.heart:nth-child(25) {
+  -webkit-transform: translateX(95px) translateZ(-402px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(95px) translateZ(-402px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(25) .movable {
+  -webkit-animation: drop 5000ms 1162ms linear infinite;
+          animation: drop 5000ms 1162ms linear infinite;
+}
+.heart:nth-child(25) .ring {
+  -webkit-animation: wave 5000ms 5062ms ease-out infinite;
+          animation: wave 5000ms 5062ms ease-out infinite;
+}
+.heart:nth-child(25) .inner {
+  -webkit-animation: rotation 2113ms linear infinite;
+          animation: rotation 2113ms linear infinite;
+}
+.heart:nth-child(26) {
+  -webkit-transform: translateX(187px) translateZ(-401px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(187px) translateZ(-401px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(26) .movable {
+  -webkit-animation: drop 5000ms -1870ms linear infinite;
+          animation: drop 5000ms -1870ms linear infinite;
+}
+.heart:nth-child(26) .ring {
+  -webkit-animation: wave 5000ms 2030ms ease-out infinite;
+          animation: wave 5000ms 2030ms ease-out infinite;
+}
+.heart:nth-child(26) .inner {
+  -webkit-animation: rotation 3576ms linear infinite;
+          animation: rotation 3576ms linear infinite;
+}
+.heart:nth-child(27) {
+  -webkit-transform: translateX(-296px) translateZ(439px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-296px) translateZ(439px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(27) .movable {
+  -webkit-animation: drop 5000ms 686ms linear infinite;
+          animation: drop 5000ms 686ms linear infinite;
+}
+.heart:nth-child(27) .ring {
+  -webkit-animation: wave 5000ms 4586ms ease-out infinite;
+          animation: wave 5000ms 4586ms ease-out infinite;
+}
+.heart:nth-child(27) .inner {
+  -webkit-animation: rotation 3077ms linear infinite;
+          animation: rotation 3077ms linear infinite;
+}
+.heart:nth-child(28) {
+  -webkit-transform: translateX(-410px) translateZ(-601px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-410px) translateZ(-601px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(28) .movable {
+  -webkit-animation: drop 5000ms 919ms linear infinite;
+          animation: drop 5000ms 919ms linear infinite;
+}
+.heart:nth-child(28) .ring {
+  -webkit-animation: wave 5000ms 4819ms ease-out infinite;
+          animation: wave 5000ms 4819ms ease-out infinite;
+}
+.heart:nth-child(28) .inner {
+  -webkit-animation: rotation 2543ms linear infinite;
+          animation: rotation 2543ms linear infinite;
+}
+.heart:nth-child(29) {
+  -webkit-transform: translateX(-276px) translateZ(61px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-276px) translateZ(61px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(29) .movable {
+  -webkit-animation: drop 5000ms -830ms linear infinite;
+          animation: drop 5000ms -830ms linear infinite;
+}
+.heart:nth-child(29) .ring {
+  -webkit-animation: wave 5000ms 3070ms ease-out infinite;
+          animation: wave 5000ms 3070ms ease-out infinite;
+}
+.heart:nth-child(29) .inner {
+  -webkit-animation: rotation 2008ms linear infinite;
+          animation: rotation 2008ms linear infinite;
+}
+.heart:nth-child(30) {
+  -webkit-transform: translateX(-104px) translateZ(-575px) scale3d(0.5, 0.5, 0.5);
+          transform: translateX(-104px) translateZ(-575px) scale3d(0.5, 0.5, 0.5);
+}
+.heart:nth-child(30) .movable {
+  -webkit-animation: drop 5000ms -536ms linear infinite;
+          animation: drop 5000ms -536ms linear infinite;
+}
+.heart:nth-child(30) .ring {
+  -webkit-animation: wave 5000ms 3364ms ease-out infinite;
+          animation: wave 5000ms 3364ms ease-out infinite;
+}
+.heart:nth-child(30) .inner {
+  -webkit-animation: rotation 4700ms linear infinite;
+          animation: rotation 4700ms linear infinite;
+}
+
+@-webkit-keyframes blur {
+  0% {
+    -webkit-filter: blur(20px) grayscale(150%);
+            filter: blur(20px) grayscale(150%);
+  }
+  100% {
+    -webkit-filter: blur(10px) grayscale(50%);
+            filter: blur(10px) grayscale(50%);
+  }
+}
+
+@keyframes blur {
+  0% {
+    -webkit-filter: blur(20px) grayscale(150%);
+            filter: blur(20px) grayscale(150%);
+  }
+  100% {
+    -webkit-filter: blur(10px) grayscale(50%);
+            filter: blur(10px) grayscale(50%);
+  }
+}
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 3;
+  }
+  100% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+@keyframes drop {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 3;
+  }
+  100% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg) scale(0) translateZ(-37px);
+            transform: translate(-50%, -50%) rotateX(90deg) scale(0) translateZ(-37px);
+    opacity: 2;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg) scale(2) translateZ(-37px);
+            transform: translate(-50%, -50%) rotateX(90deg) scale(2) translateZ(-37px);
+    opacity: 0;
+  }
+}
+@keyframes wave {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg) scale(0) translateZ(-37px);
+            transform: translate(-50%, -50%) rotateX(90deg) scale(0) translateZ(-37px);
+    opacity: 2;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg) scale(2) translateZ(-37px);
+            transform: translate(-50%, -50%) rotateX(90deg) scale(2) translateZ(-37px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes wing {
+  0% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+@keyframes wing {
+  0% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
